@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>ĐĂNG KÝ THÀNH VIÊN</title>
+<link rel="stylesheet" type="text/css" href="CSS/Dangky.css">
+<script language="javascript">
+function validateForm()
+{
+    // Bước 1: Lấy giá trị của username và password
+    var hoten = document.getElementById('HovaTen').value;
+    var username = document.getElementById('TenDangNhap').value;
+	var email = document.getElementById('Email').value;
+	var sdt = document.getElementById('Sdt').value;
+	var diachi = document.getElementById('DiaChi').value;
+	var matkhau = document.getElementById('MatKhau').value;
+ 	var nhaplaimatkhau = document.getElementById('nhaplaiMatKhau').value;
+    // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+    if (hoten == '')
+    {
+        alert('Bạn chưa nhập họ và tên!');
+    }
+	else if (username == ''){
+        alert('Bạn chưa nhập tên đăng nhập!');
+    }
+	else if (email == ''){
+        alert('Bạn chưa nhập email!');
+    }
+	else if (sdt == ''){
+        alert('Bạn chưa nhập số điện thoại!');
+    }
+	else if (diachi == ''){
+        alert('Bạn chưa nhập địa chỉ!');
+    }
+	else if (matkhau == ''){
+        alert('Bạn chưa nhập mật khẩu!');
+    }
+	else if (nhaplaimatkhau != matkhau){
+        alert('Mật khẩu nhập lại không khớp!');
+    }
+    else{
+        alert('Dữ liệu hợp lệ');
+        return true;
+    }
+ 
+    return false;
+}
+</script>
+</head>
+<body>
+<header>
+		<div id="logo">
+        	<a href="Trangchu.html" target="_blank"><img src="img/logo.png" alt="Cửa hàng Laptop cũ" width="218" height="87"/></a>
+  </div>
+        <DIV align="center" id="hd">
+       	  <table width="839" height="95">
+  <tr align="center" id="chuy">
+    <td width="18"><img src="img/icon_phone.png" width="20px" height="20px"></td>
+    <td width="90" height="44"><div align="center"><a href="#"><strong>0818.666.01</strong></a></div></td>
+    <td width="18"><a href="#"><img src="img/icon_location.png" width="20px" height="20px"></a></td>
+    <td width="138"><div align="center"><a href="#"> Hệ thống cửa hàng</a></div></td>
+    <td width="103"><a href="#">Tuyển dụng</a></td>
+    <td width="149" rowspan="2"><p><img src="img/icon-free.png" width="50" height="30">Dùng thử</p>
+      <p><strong>7 ngày</strong></p>      <div align="center"></div></td>
+    <td width="125" rowspan="2"><p><img src="img/icon-1-1.png" width="50" height="30">1 đổi 1</p>
+      <p><strong>30 ngày</strong></p>      <div align="center"></div></td>
+    <td width="162" rowspan="2"><p><img src="img/icon-bh.png" width="50" height="30">Bảo hành</p>
+      <p><strong>36 tháng</strong></p>      <div align="center"></div></td>
+    </tr>
+  <tr>
+    <td colspan="5" align="center">
+    		<form id="form1" name="form1" method="post" action="">
+            <input name="tSearch" type="text" placeholder="Bạn muốn tìm gì..." size="36" />
+            <input type="submit" value="Tìm kiếm">
+          </form>
+        </td>
+    </tr>
+</table> 
+  </DIV>
+</header>
+	<nav>
+    <div id="subnav" align="left">
+    	<ul>
+              <li><div class="dropdown">
+  					<button class="dropbtn"onClick="location.href='laptop.html';">LAPTOP</button>
+  					<div class="dropdown-content">
+    				<a href="#">LAPTOP DELL</a>
+    				<a href="#">LAPTOP HP</a>
+    				<a href="#">LAPTOP LENOVO</a>
+  					</div>
+				</div></li>
+              <li><div class="dropdown">
+  					<button class="dropbtn"onClick="location.href='pcw.html';">PC WORKSTATION</button>
+  					<div class="dropdown-content">
+    				<a href="#">PC WORKSTATION DELL</a>
+    				<a href="#">PC WORKSTATION HP</a>
+    				<a href="#">PC WORKSTATION LENOVO</a>
+  					</div>
+				</div></li>
+              <li><div class="dropdown">
+  					<button class="dropbtn"onClick="location.href='apple.html';">APPLE</button>
+  					<div class="dropdown-content">
+    				<a href="#">IMAC</a>
+    				<a href="#">MACBOOK</a>
+    				<a href="#">MACMINI</a>
+  					</div>
+				</div></li>
+              <li><div class="dropdown">
+  					<button class="dropbtn">TIN CÔNG NGHỆ</button>
+				</div></li>
+            </ul>
+            </div>
+    <div id="dn" align="right">
+        	<a href="dangnhap.html">Đăng nhập</a> | <a href="dangky.html">Đăng ký </a>|<a href="#"> Giỏ hàng </a>
+      </div>
+</nav>
+    <p align="center"><img src="img/middle_5-01-768x48.png" height="60" width="1200"></p>
+    <div id="body">
+<article>
+           	<section>
+            	<form id="form1" name="dangky" method="post" action="#"  onSubmit="return validateForm()">
+                      <table width="50%"id="login">
+                        <tr>
+                          <th colspan="2" align="center" n ><strong>ĐĂNG KÝ</strong></th>
+                        </tr>
+                        <tr>
+                          <td width="26%">Họ và tên</td>
+                          <td width="74%" ><label for="HvT"></label>
+                          <input type="text" name="HovaTen" id="HovaTen" /></td>
+                        </tr>
+                        <tr>
+                          <td width="26%">Tên đăng nhập</td>
+                          <td width="74%" ><label for="TenDangNhap"></label>
+                          <input type="text" name="TenDangNhap" id="TenDangNhap" /></td>
+                        </tr>
+                         <tr>
+                          <td>Email</td>
+                          <td><label for="Email"></label>
+                          <input type="email" name="Email" id="Email" /></td>
+                        </tr>
+                         <tr>
+                          <td>Số điện thoại</td>
+                          <td><label for="Sdt"></label>
+                          <input type="number" name="Sdt" id="Sdt" /></td>
+                        </tr>
+                        <tr>
+                          <td>Địa chỉ</td>
+                          <td><textarea cols="50" rows="5" id="DiaChi"></textarea></td>
+                        </tr>
+                        <tr>
+                          <td>Mật khẩu</td>
+                          <td><label for="MatKhau"></label>
+                          <input type="password" name="MatKhau" id="MatKhau" /></td>
+                        </tr>
+                        <tr>
+                          <td>Nhập lại mật khẩu</td>
+                          <td><label for="nhaplaiMatKhau"></label>
+                          <input type="password" name="nhaplaiMatKhau" id="nhaplaiMatKhau" /></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Đăng ký" /><input type="reset" name="huy" id="huy" value="Hủy" /></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" align="right">Đã có tài khoản-<a href="dangnhap.hmtl">Đăng nhập</a>-</td>
+                        </tr>
+                      </table>
+                    
+                    </form>	
+            </section>
+            </article>
+     <footer>
+     <div id="ft1">
+       <div align="center">
+         <table width="100%" height="111" bgcolor="#0066FF">
+           <tr>
+             <td width="238"><p><strong>HỖ TRỢ KHÁCH HÀNG</strong></p>
+               <ul>
+                 <a href="#"><li>Hướng dẫn mua hàng</li></a>
+                 <a href="#"><li>Bảo hành và bảo trì</li></a>
+                 <a href="#"><li>Bán hàng online</li></a>
+             </ul></td>
+             <td width="284"><p><strong>CHÍNH SÁCH VÀ QUY ĐỊNH</strong></p>
+               <ul>
+                 <a href="#"><li>Chính sách đổi trả hàng</li></a>
+                 <a href="#"><li>Chính sách vận chuyển</li></a>
+                 <a href="#"><li>Chính sách trả góp</li></a>
+             </ul></td>
+              <td width="284"><p><strong>THÔNG TIN CÔNG TY</strong></p>
+               <ul>
+                 <a href="#"><li>Liên hệ, góp ý</li></a>
+                 <a href="#"><li>Tin tức</li></a>
+                 <li>Hotline Góp Ý: 0938 1111 28</li>
+             </ul></td>
+             <td width="284"><p><strong>TRỤ SỞ CHÍNH(TP. HCM)</strong></p>
+               <ul>
+                 <li>221 Nguyễn Văn Đậu, Phường 11, Q. Bình Thạnh</li>
+                 <li>Hotline Bán Hàng: 0818 6666 01</li>
+                 <li>Hotline Bảo Hành: 0828 6666 01</li>
+                 <li>Thời gian làm việc: Từ 09h00 - 19h00 (Hàng ngày)</li>
+             </ul></td>
+             <td width="284"><p><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></p><br>
+               <a href="https://www.facebook.com/Laptop3mien/"><img src="img/icon_fb.png" width="40" height="40"></a>
+               <a href="https://www.youtube.com/channel/UCRayERzz5VZ02R5DnWXFprA"><img src="img/icon_yt.png" width="40" height="40"></a>
+               <a href="#"><img src="img/icon_ig.jpg" width="40" height="40"></a>
+             </td>
+           </tr>
+  </table>
+         
+       </div>
+     </div>
+     <div id="ft2">
+     <br>
+   	   <p>Mã số doanh nghiệp: 0314319069 do Sở Kế Hoạch và Đầu Tư TP.HCM cấp. Trụ sở chính:</p>
+        <p>221 Nguyễn Văn Đậu, Phường 11, Q. Bình Thạnh, Thành phố Hồ Chí Minh 2015-2019. Bản quyền thuộc về CÔNG TY TNHH TM CÔNG NGHỆ NGỌC MINH LONG</p>
+        <p>Email: abc.thudaumotuniversity@gmail.com</p>
+     </div>
+</footer>
+   </body>
+   </html>
